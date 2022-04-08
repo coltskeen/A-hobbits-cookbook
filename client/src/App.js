@@ -1,13 +1,13 @@
 import React from 'react';
-// import { ReactDOM } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("/recipe")
+    fetch("/recipe", {
+      mode:'cors'
+    })
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -17,12 +17,15 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header className="App-header"> *Make a header bar here* </header>
+      <div className="container">
+        {/* <Featured className="featured"/>
+        <Showcase className="showcase"/> */}
         <p>
-          {!data ? "Loading..." : data}
+            {!data ? "Loading..." : data}
         </p>
-      </header>
+      </div>
+      <footer className="footer">* Put footer here *</footer>
     </div>
   );
 }

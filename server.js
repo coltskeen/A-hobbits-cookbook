@@ -3,6 +3,7 @@ const express = require("express");
 const db = require("./db/conn");
 const app = express();
 const path = require('path');
+const cors = require('cors');
 // const PORT = 3000;
 
 //MIDDLEWARE
@@ -10,6 +11,7 @@ const path = require('path');
 app.use(express.static(path.resolve(__dirname, '../client/build')));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(cors());
 // app.use(express.static("public"));
 
 
