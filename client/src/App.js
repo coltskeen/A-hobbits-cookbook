@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Featured from "./Featured";
+import Showcase from "./Showcase";
 import './App.css';
 
 function App() {
@@ -22,15 +23,14 @@ function App() {
       <header className="App-header"> <img class="logo" src={"../pictures/A_hobbits_cookbook_logo.jpeg"}/> </header>
       <div className="container">
         <Featured className="featured" data={data}/>
-        
-        {/* <Showcase className="showcase"/> */}
+        <Showcase className="showcase" data={data}/>
         {/* <p>
             {!data ? "Loading..." : data}
         </p> */}
       </div>
       <footer className="footer">
-        <a className="navigation-bar">About</a>
-        <a className="navigation-bar">Contact</a>
+        <a className="navigation-bar" href="#">About</a>
+        <a className="navigation-bar" href="#">Contact</a>
       </footer>
     </div>
   );
