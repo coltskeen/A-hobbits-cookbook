@@ -24,9 +24,6 @@ function App() {
       <div className="container">
         <Featured className="featured" data={data}/>
         <Showcase className="showcase" data={data}/>
-        {/* <p>
-            {!data ? "Loading..." : data}
-        </p> */}
       </div>
       <footer className="footer">
         <a className="navigation-bar" href="#">About</a>
