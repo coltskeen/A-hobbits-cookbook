@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header"> <img class="logo" src={"../pictures/A_hobbits_cookbook_logo.jpeg"}/> </header>
+      <header className="App-header"> <img className="logo" src={"../pictures/hobbit-cookbook-logo.png"}/> </header>
       <div className="container">
         <Featured className="featured" data={data}/>
         <Showcase className="showcase" data={data}/>
