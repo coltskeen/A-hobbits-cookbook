@@ -5,11 +5,18 @@ const Showcase = (props) => {
     
     return(
         <div className="showcase">
-            <input className="search" type="text" placeholder="   What are you looking for?"/>
-            <button type="submit" className="search-button">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <div className="cards"></div>
+            <div className="showcase-search">
+                <input className="search" type="text" placeholder="   What are you looking for?"/>
+                <button type="submit" className="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div className="showcase-card-container">
+                <div className="showcase-card"></div>
+                <div className="showcase-card"></div>
+                <div className="showcase-card"></div>
+                <div className="showcase-card"></div>
+            </div>
         </div>
     );
 }
