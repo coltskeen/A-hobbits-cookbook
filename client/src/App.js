@@ -12,9 +12,10 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        let dataArr = Object.entries(data[0]);
-        console.log(dataArr);
-        setData(dataArr)
+        console.log("data", data);
+        // let dataArr = Object.entries(data[0]);
+        // console.log(dataArr);
+        setData(data);
       });
   }, []);
 

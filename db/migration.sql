@@ -10,7 +10,8 @@ CREATE TABLE recipe(
     directions text [],
     servings int,
     cook_time text,
-    classification text
+    classification text,
+    description text
 );
 
 CREATE TABLE shopping_list(

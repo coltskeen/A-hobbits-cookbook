@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 
 const Featured = (props) => {
-    console.log(props.data[1][1]);
-    const [featuredRecipe, setFeaturedRecipe] = useState(null);
+    console.log("Featured: ", props.data);
+    const [featuredRecipe, setFeaturedRecipe] = useState(props.data[0]);
 
     return (
         <div className="featured">
-            <img className="featured-image" src={props.data[1][1]}/>
+            <img className="featured-image" src={featuredRecipe.image}/>
             <div className="ribbon">
-                {props.data[2][1]}
+                {featuredRecipe.name}
             </div>
             {/* <p>{props.data[2][1]}</p> */}
         </div>
