@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 
 const Featured = (props) => {
-    console.log("Featured: ", props.data);
+    // console.log("Featured: ", props.data);
     const [featuredRecipe, setFeaturedRecipe] = useState(props.data[0]);
 
     return (

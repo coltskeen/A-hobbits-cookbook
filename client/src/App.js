@@ -1,23 +1,21 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Featured from "./Featured";
 import Showcase from "./Showcase";
 import './App.css';
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetch("/recipe", {
       mode:'cors'
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
-        // let dataArr = Object.entries(data[0]);
-        // console.log(dataArr);
+        // console.log("data", data);
         setData(data);
       });
-  }, []);
+  }, [data]);
 
   return (
     <div className="App">

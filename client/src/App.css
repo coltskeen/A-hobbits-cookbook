@@ -116,6 +116,7 @@ body {
   height: 75px;
   width: 100%;
   position: absolute;
+  right: 0;
   left: 0;
   bottom: 0;
   height: 100px;
@@ -194,7 +195,7 @@ body {
 
 .card-image {
   width: 200px;
-  height: auto;
+  height: 133.84px;
 }
 
 .card-title {
