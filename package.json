@@ -2,10 +2,11 @@
   "name": "a-hobbits-cookbook",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./client/src/index.js",
   "scripts": {
-    "start": "concurrently \"nodemon server.js\" \"cd ./client && npm start\"",
-    "dev": "nodemon server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"nodemon server.js\" \"cd ./client && npm start\"",
     "build": "cd client && npm install && npm run build"
   },
   "engines": {

@@ -15,7 +15,7 @@ function App() {
         // console.log("data", data);
         setData(data);
       });
-  }, [data]);
+  }, []);
 
   return (
     <div className="App">

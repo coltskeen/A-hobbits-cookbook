@@ -1,30 +1,49 @@
 import React, {useState} from "react";
-import RecipeCard from "./RecipeCard";
+// import Search from "./Search";
+import RecipeCard from './RecipeCard';
 
 const Showcase = (props) => {
-    // console.log("Showcase:",props.data);
+    
     const [cardRecipe, setCardRecipe] = useState(props.data);
     const [query, setQuery] = useState('');
-    // console.log(cardRecipe);
-    // console.log(query);
 
-    return(
+    const filteredRecipes = props.data.filter(
+        recipe => {
+            return (
+                recipe.name.toLowerCase().includes(query.toLowerCase())
+            );
+        }
+    );
+
+    const handleChange = (e) => setQuery(e.target.value);
+    
+    function SearchList() {
+        // console.log("SearchList:",filteredRecipes)
+        // setCardRecipe(filteredRecipes);
+        return (
+            <RecipeCard className="showcase-card" data={filteredRecipes}/>
+        )
+    }
+
+    return (
         <div className="showcase">
             <div className="showcase-search">
                 <input 
                     className="search" 
                     type="text" 
-                    placeholder="   What are you looking for?"             onInput={(e) => this.recordResponse(e.target.value)}
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="   What are you looking for?"             
+                    // value={query}
+                    onChange={handleChange}
                     />
                 <button type="submit" className="search-button">
                 <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
-            <RecipeCard className="showcase-card" data={cardRecipe}/>
+            <>
+                {SearchList()}
+            </>
         </div>
-    );
+    )
 }
 
 export default Showcase;
